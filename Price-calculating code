@@ -1,0 +1,44 @@
+#Daria Timofeeva
+#21.07.2021
+#tfk31@yandex.ru
+#This little programm is meant to count the cost depending on a number of parametres.
+print(
+    """Items that can be purchased:
+    1 - CD disk: 5€
+    2 - Book: 10€
+    3 - Mp3 Player: 45€
+    4 - T-shirt: 15€
+    5 - Item: 20€
+    """)
+cost = 0
+add = 0
+#Making a shopping list
+while add != "" :
+    add = input("Write number of the item you wish to purchase:")
+    if add == "1":
+        cost += 5
+    elif add == "2":
+        cost += 10
+    elif add == "3":
+        cost += 45
+    elif add == "4":
+        cost += 15
+    elif add == "5":
+        cost += 20
+print("Where is your destination? Choose either Europe, Asia, America or Oceania")
+destination = input()
+#The shipping addition
+if destination == "Europe":
+    cost += 0
+elif destination == "Asia":
+    cost += 15
+elif destination == "America":
+    cost += 20
+elif destination == "Oceania":
+    cost += 25
+else:
+    print("Unable to identify destination. Please, try again.")
+    destination = input()
+print(f"The total cost on your purchase including shipping is: {cost} €.")
+print("Press enter to quit.")
+input()
